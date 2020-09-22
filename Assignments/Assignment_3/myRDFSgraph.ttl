@@ -20,13 +20,13 @@ ex:AmongUs a ex:CrossPlatformGame ;
     ex:has_subGenre ex:Survival ;
     ex:has_title "Among Us" .
 
-ex:Destiny a ex:CrossPlatformGame ;
-    rdfs:label "Destiny"@en ;
+ex:Destiny2 a ex:CrossPlatformGame ;
+    rdfs:label "Destiny2"@en ;
     ex:contains_dlc "Shadowkeep" ;
     ex:has_genre ex:Shooter ;
     ex:has_releaseDate "September 6, 2017" ;
     ex:has_subGenre ex:RolePlayingGame ;
-    ex:has_title "Destiny" .
+    ex:has_title "Destiny2" .
 
 ex:Halo5 a ex:ConsoleGame ;
     rdfs:label "Halo 5: Gaurdians"@en ;
