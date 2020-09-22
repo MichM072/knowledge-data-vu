@@ -1,0 +1,74 @@
+@prefix ex: <http://example.com/kad2020/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:DownloadableContent a rdfs:Class ;
+    rdfs:domain ex:Game .
+
+ex:Game a rdfs:Class .
+
+ex:Genre a rdfs:Class .
+
+ex:ReleaseData a rdfs:Class .
+
+ex:Title a rdfs:Class .
+
+ex:AmongUs a ex:CrossPlatformGame ;
+    rdfs:label "Among Us"@en ;
+    ex:contains_dlc "Pet Bundless" ;
+    ex:has_genre ex:PartyGame ;
+    ex:has_releaseDate "June 15, 2018" ;
+    ex:has_subGenre ex:Survival ;
+    ex:has_title "Among Us" .
+
+ex:Destiny a ex:CrossPlatformGame ;
+    rdfs:label "Destiny"@en ;
+    ex:contains_dlc "Shadowkeep" ;
+    ex:has_genre ex:Shooter ;
+    ex:has_releaseDate "September 6, 2017" ;
+    ex:has_subGenre ex:RolePlayingGame ;
+    ex:has_title "Destiny" .
+
+ex:Halo5 a ex:ConsoleGame ;
+    rdfs:label "Halo 5: Gaurdians"@en ;
+    ex:contains_dlc "Memories of Reach" ;
+    ex:has_genre ex:Shooter ;
+    ex:has_releaseDate "October 27, 2015" ;
+    ex:has_title "Halo 5: Gaurdians" .
+
+ex:RaidShadowLegends a ex:MobileGame ;
+    rdfs:label "RaidShadowLegends"@en ;
+    ex:has_genre ex:Fantasy ;
+    ex:has_releaseDate "July 29, 2018" ;
+    ex:has_subGenre ex:RolePlayingGame ;
+    ex:has_title "Raid Shadow Legends" .
+
+ex:contains_dlc rdfs:range ex:DownloadableContent .
+
+ex:has_releaseDate rdfs:domain ex:Game ;
+    rdfs:range ex:ReleaseDate .
+
+ex:has_subGenre rdfs:range ex:SubGenre ;
+    rdfs:subPropertyOf ex:has_genre .
+
+ex:has_title rdfs:domain ex:Game ;
+    rdfs:range ex:Title .
+
+ex:ConsoleGame rdfs:subClassOf ex:Game .
+
+ex:Fantasy a ex:Genre .
+
+ex:MobileGame rdfs:subClassOf ex:Game .
+
+ex:PartyGame a ex:Genre .
+
+ex:Survival a ex:SubGenre .
+
+ex:has_genre rdfs:domain ex:Game ;
+    rdfs:range ex:Genre .
+
+ex:CrossPlatformGame rdfs:subClassOf ex:Game .
+
+ex:RolePlayingGame a ex:SubGenre .
+
+ex:Shooter a ex:Genre .
+
